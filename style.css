@@ -1,0 +1,682 @@
+
+/* ==========================
+   GLOBAL STYLING
+========================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #080d1c;
+    color: #ffffff;
+}
+
+a {
+    text-decoration: none;
+}
+
+:root {
+    --purple: #8b5cf6;
+    --blue: #38bdf8;
+    --dark: #080d1c;
+    --card: #111a30;
+    --text: #aab4ca;
+}
+
+
+/* ==========================
+   NAVIGATION
+========================== */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 8%;
+    background: #0b1224;
+    border-bottom: 1px solid #1b2944;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.logo span,
+footer span {
+    color: var(--purple);
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    color: #d1d5e0;
+    font-size: 13px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: var(--purple);
+}
+
+.nav-btn {
+    background: var(--purple);
+    padding: 11px 23px;
+    border-radius: 6px;
+    color: white;
+    font-size: 13px;
+}
+
+
+/* ==========================
+   HERO SECTION
+========================== */
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 100px 8%;
+    gap: 50px;
+    min-height: 570px;
+    background:
+        radial-gradient(circle at 80% 20%, #38216b 0%, transparent 35%),
+        #080d1c;
+}
+
+.hero-content {
+    max-width: 570px;
+}
+
+.hero-tag,
+.section-tag {
+    color: var(--blue);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.hero h1 {
+    font-size: 53px;
+    line-height: 1.25;
+    margin: 22px 0;
+}
+
+.hero h1 span {
+    color: var(--purple);
+}
+
+.hero-content > p {
+    color: var(--text);
+    font-size: 14px;
+    line-height: 1.9;
+    margin-bottom: 30px;
+}
+
+.hero-buttons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.primary-btn {
+    display: inline-block;
+    background: var(--purple);
+    color: white;
+    padding: 14px 25px;
+    border-radius: 7px;
+    font-size: 13px;
+    transition: 0.3s;
+}
+
+.primary-btn:hover,
+.nav-btn:hover {
+    background: #7041d6;
+}
+
+.secondary-btn {
+    color: white;
+    font-size: 13px;
+}
+
+.hero-image {
+    width: 48%;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 18px;
+    border: 1px solid #55408d;
+}
+
+
+/* ==========================
+   ACHIEVEMENTS
+========================== */
+
+.achievements {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 45px 8%;
+    background: #111a30;
+    text-align: center;
+    border-top: 1px solid #263452;
+    border-bottom: 1px solid #263452;
+}
+
+.achievement h2 {
+    font-size: 35px;
+    color: var(--purple);
+}
+
+.achievement p {
+    font-size: 13px;
+    color: var(--text);
+}
+
+
+/* ==========================
+   GENERAL SECTION
+========================== */
+
+.section {
+    padding: 100px 8%;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 55px;
+}
+
+.section-heading h2 {
+    font-size: 34px;
+    margin: 15px 0;
+}
+
+.section-heading p {
+    color: var(--text);
+    font-size: 13px;
+}
+
+
+/* ==========================
+   ABOUT SECTION
+========================== */
+
+.about {
+    display: flex;
+    align-items: center;
+    gap: 65px;
+}
+
+.about-image {
+    width: 48%;
+}
+
+.about-image img {
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.about-content {
+    flex: 1;
+}
+
+.about-content h2 {
+    font-size: 35px;
+    line-height: 1.4;
+    margin: 20px 0;
+}
+
+.about-content p {
+    color: var(--text);
+    font-size: 13px;
+    line-height: 2;
+    margin-bottom: 20px;
+}
+
+
+/* ==========================
+   SERVICES
+========================== */
+
+.services {
+    background: #0d1528;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.service-card {
+    background: var(--card);
+    border: 1px solid #25304a;
+    padding: 30px;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--purple);
+}
+
+.service-icon {
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+
+.service-card h3 {
+    font-size: 18px;
+    margin-bottom: 12px;
+}
+
+.service-card p {
+    font-size: 12px;
+    color: var(--text);
+    line-height: 1.9;
+    margin-bottom: 20px;
+}
+
+.service-card a {
+    color: var(--blue);
+    font-size: 12px;
+}
+
+
+/* ==========================
+   TEAM SECTION
+========================== */
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+}
+
+.team-card {
+    background: var(--card);
+    text-align: center;
+    border: 1px solid #25304a;
+    border-radius: 12px;
+    padding: 25px 15px;
+    transition: 0.3s;
+}
+
+.team-card:hover {
+    transform: translateY(-7px);
+    border-color: var(--purple);
+}
+
+.team-card img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 18px;
+    border: 3px solid var(--purple);
+}
+
+.team-card h3 {
+    font-size: 16px;
+}
+
+.team-card p {
+    color: var(--blue);
+    font-size: 12px;
+    margin: 7px 0;
+}
+
+.team-card span {
+    color: var(--text);
+    font-size: 11px;
+}
+
+
+/* ==========================
+   TESTIMONIALS
+========================== */
+
+.testimonials {
+    background: #0d1528;
+}
+
+.testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.testimonial-card {
+    background: var(--card);
+    border: 1px solid #25304a;
+    border-radius: 12px;
+    padding: 30px;
+}
+
+.stars {
+    color: #fbbf24;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.testimonial-card p {
+    color: #c0c9d9;
+    font-size: 13px;
+    line-height: 1.9;
+    margin-bottom: 25px;
+}
+
+.testimonial-card h3 {
+    font-size: 15px;
+}
+
+.testimonial-card span {
+    color: var(--blue);
+    font-size: 11px;
+}
+
+
+/* ==========================
+   CALL TO ACTION
+========================== */
+
+.cta {
+    text-align: center;
+    padding: 85px 8%;
+    background: linear-gradient(120deg, #5434a3, #1d4e89);
+}
+
+.cta h2 {
+    font-size: 34px;
+    margin-bottom: 18px;
+}
+
+.cta p {
+    font-size: 13px;
+    color: #e1e7f5;
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+.cta-btn {
+    display: inline-block;
+    background: white;
+    color: #5535a0;
+    padding: 14px 30px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+
+/* ==========================
+   CONTACT
+========================== */
+
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+    gap: 60px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.contact-info h3 {
+    font-size: 25px;
+    margin-bottom: 18px;
+}
+
+.contact-info > p {
+    color: var(--text);
+    font-size: 13px;
+    line-height: 1.9;
+    margin-bottom: 30px;
+}
+
+.contact-item {
+    margin-bottom: 25px;
+}
+
+.contact-item strong {
+    color: var(--blue);
+    font-size: 14px;
+}
+
+.contact-item p {
+    color: var(--text);
+    font-size: 13px;
+    margin-top: 7px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    background: #111a30;
+    border: 1px solid #2b3854;
+    border-radius: 7px;
+    padding: 15px;
+    color: white;
+    outline: none;
+    font-size: 13px;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: var(--purple);
+}
+
+.contact-form button {
+    background: var(--purple);
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 7px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background: #7041d6;
+}
+
+
+/* ==========================
+   FOOTER
+========================== */
+
+footer {
+    background: #050916;
+    padding: 45px 8% 20px;
+    border-top: 1px solid #25304a;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.footer-content h2 {
+    font-size: 25px;
+}
+
+.footer-content p {
+    color: var(--text);
+    font-size: 12px;
+    margin-top: 10px;
+}
+
+.footer-links {
+    display: flex;
+    gap: 22px;
+    flex-wrap: wrap;
+}
+
+.footer-links a {
+    color: #c3ccdc;
+    font-size: 12px;
+}
+
+.footer-links a:hover {
+    color: var(--purple);
+}
+
+.copyright {
+    border-top: 1px solid #25304a;
+    text-align: center;
+    margin-top: 35px;
+    padding-top: 20px;
+}
+
+.copyright p {
+    color: #77839a;
+    font-size: 11px;
+}
+
+
+/* ==========================
+   RESPONSIVE DESIGN
+========================== */
+
+@media (max-width: 1000px) {
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .service-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about {
+        gap: 30px;
+    }
+}
+
+
+@media (max-width: 700px) {
+
+    .navbar {
+        flex-wrap: wrap;
+        gap: 15px;
+        padding: 18px 5%;
+    }
+
+    nav {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+
+    nav a {
+        font-size: 11px;
+    }
+
+    .nav-btn {
+        padding: 9px 13px;
+        font-size: 11px;
+    }
+
+    .hero {
+        flex-direction: column;
+        padding: 70px 6%;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero-image {
+        width: 100%;
+    }
+
+    .hero-image img {
+        height: 250px;
+    }
+
+    .achievements {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+
+    .section {
+        padding: 70px 6%;
+    }
+
+    .about {
+        flex-direction: column;
+    }
+
+    .about-image {
+        width: 100%;
+    }
+
+    .about-image img {
+        height: 280px;
+    }
+
+    .about-content h2 {
+        font-size: 28px;
+    }
+
+    .service-grid,
+    .team-grid,
+    .testimonial-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section-heading h2 {
+        font-size: 27px;
+    }
+
+    .contact-container {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .cta h2 {
+        font-size: 27px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-links {
+        justify-content: center;
+    }
+}
